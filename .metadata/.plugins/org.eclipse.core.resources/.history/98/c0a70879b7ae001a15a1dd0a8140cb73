@@ -1,0 +1,10 @@
+package Misscelaneous;
+
+public class SSL_Certificates {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

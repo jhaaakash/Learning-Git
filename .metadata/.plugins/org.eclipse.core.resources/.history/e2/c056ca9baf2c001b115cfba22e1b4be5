@@ -1,0 +1,19 @@
+package TestNGPackage;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+public class Base {
+//utility code: that need to get executed everytime
+	@BeforeMethod(alwaysRun = true)
+	public void LaunchBrowser()
+	{
+		System.out.println("Launch Browser");
+	}
+	@AfterMethod
+	public void CloseBrowser()
+	{
+		System.out.println("Close Browser");
+	}
+	
+}

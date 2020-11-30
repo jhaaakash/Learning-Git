@@ -1,0 +1,35 @@
+package TestNGPackage;
+
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class Sprint2 {
+// Data driven testing // Data driven Framework same cases with different data. so this will run no of time we have
+	//data
+	@Test(dataProvider = "getData")
+	public void tc05(String un, String pwd)
+	{
+		
+		System.out.println("Inside tc5");
+		System.out.println("Username is"+un);
+		System.out.println("Password is"+pwd);
+		
+	}
+	
+	@DataProvider
+	public String[][] getData()
+	{
+		String[][] arr= new String[3][2];
+		arr[0][0]="Admin";
+		arr[0][1]="Admmin123";
+		arr[1][0]="Admin";
+		arr[1][1]="Admmin";
+		arr[2][0]="sdfdsf";
+		arr[2][1]="dsfdsfs";
+		
+		return arr;
+		
+		
+	}
+}

@@ -1,0 +1,85 @@
+package TestNGPackage;
+
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
+
+public class Base {
+//utility code: that need to get executed everytime
+	
+	
+	
+	
+	public static ExtentHtmlReporter htmlReporter;
+    public static ExtentReports extent;
+    public static ExtentTest logger;
+
+	
+    @BeforeSuite
+    public void startReport(){
+     
+              htmlReporter = new ExtentHtmlReporter("E:\\Videos Automation\\Nitish Sir Classes\\ExecutionReport.html");
+           extent = new ExtentReports();
+           extent.attachReporter(htmlReporter);
+
+    }
+
+
+
+    @AfterSuite
+      public void endReport(){
+                     extent.flush();
+        }
+    
+	
+	@Parameters({"Browser","Url"})
+	@BeforeMethod(alwaysRun = true)
+	public void LaunchBrowser(@Optional("Chrome")String browser, @Optional("www.chrome.com") String Url)
+	{
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+		System.out.println("Launch Browser");
+		}
+		
+		
+		else if (browser.equalsIgnoreCase("i.e")) {
+			System.out.println("Launching I.E");
+		}
+		
+		
+	}
+	@AfterMethod
+	public void CloseBrowser()
+	{
+		System.out.println("Close Browser");
+	}
+	@AfterMethod
+    public void getResult(ITestResult result){
+
+     if(result.getStatus() == ITestResult.SUCCESS) {
+
+      logger.log(Status.PASS, "Test Case Passed " + result.getName());
+}
+
+     else if(result.getStatus() == ITestResult.FAILURE){
+
+       logger.log(Status.FAIL, "Test Case Failed is "+result.getName() + result.getThrowable());
+
+  }
+    else if(result.getStatus() == ITestResult.SKIP){
+
+              logger.log(Status.SKIP, "Test Case Skipped is "+result.getName());
+  }
+}
+	
+}

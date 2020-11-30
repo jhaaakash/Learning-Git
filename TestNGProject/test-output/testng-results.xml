@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="3" total="11" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Loan" duration-ms="174" started-at="2020-06-22T08:28:17 IST" finished-at="2020-06-22T08:28:18 IST">
+    <groups>
+      <group name="smoke">
+        <method signature="day1.smoketest1()[pri:0, instance:TestPackage.day1@731a74c]" name="smoketest1" class="TestPackage.day1"/>
+        <method signature="day2.smoketest2()[pri:0, instance:TestPackage.day2@4b4523f8]" name="smoketest2" class="TestPackage.day2"/>
+        <method signature="day3.smoketest3()[pri:0, instance:TestPackage.day3@63e2203c]" name="smoketest3" class="TestPackage.day3"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test name="Ploan" duration-ms="64" started-at="2020-06-22T08:28:17 IST" finished-at="2020-06-22T08:28:17 IST">
+      <class name="TestPackage.day1">
+        <test-method status="PASS" signature="Demo()[pri:0, instance:TestPackage.day1@731a74c]" name="Demo" duration-ms="6" started-at="2020-06-22T08:28:17 IST" finished-at="2020-06-22T08:28:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo -->
+        <test-method status="PASS" signature="Demo1()[pri:0, instance:TestPackage.day1@731a74c]" name="Demo1" duration-ms="2" started-at="2020-06-22T08:28:17 IST" finished-at="2020-06-22T08:28:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Demo1 -->
+        <test-method status="PASS" signature="smoketest1()[pri:0, instance:TestPackage.day1@731a74c]" name="smoketest1" duration-ms="2" started-at="2020-06-22T08:28:17 IST" finished-at="2020-06-22T08:28:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- smoketest1 -->
+      </class> <!-- TestPackage.day1 -->
+      <class name="TestPackage.day2">
+        <test-method status="PASS" signature="Beforemethod()[pri:0, instance:TestPackage.day2@4b4523f8]" name="Beforemethod" is-config="true" duration-ms="0" started-at="2020-06-22T08:28:17 IST" finished-at="2020-06-22T08:28:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Beforemethod -->
+        <test-method status="PASS" signature="Ploan(java.lang.String)[pri:0, instance:TestPackage.day2@4b4523f8]" name="Ploan" duration-ms="3" started-at="2020-06-22T08:28:17 IST" finished-at="2020-06-22T08:28:17 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[google.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Ploan -->
+        <test-method status="PASS" signature="smoketest2()[pri:0, instance:TestPackage.day2@4b4523f8]" name="smoketest2" duration-ms="2" started-at="2020-06-22T08:28:17 IST" finished-at="2020-06-22T08:28:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- smoketest2 -->
+      </class> <!-- TestPackage.day2 -->
+    </test> <!-- Ploan -->
+    <test name="Loan" duration-ms="24" started-at="2020-06-22T08:28:18 IST" finished-at="2020-06-22T08:28:18 IST">
+      <class name="TestPackage.day3">
+        <test-method status="PASS" signature="bfclass()[pri:0, instance:TestPackage.day3@63e2203c]" name="bfclass" is-config="true" duration-ms="0" started-at="2020-06-22T08:28:18 IST" finished-at="2020-06-22T08:28:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bfclass -->
+        <test-method status="PASS" signature="BeforeMthod()[pri:0, instance:TestPackage.day3@63e2203c]" name="BeforeMthod" is-config="true" duration-ms="1" started-at="2020-06-22T08:28:18 IST" finished-at="2020-06-22T08:28:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMthod -->
+        <test-method status="PASS" signature="APIloginCarLoan()[pri:0, instance:TestPackage.day3@63e2203c]" name="APIloginCarLoan" duration-ms="2" started-at="2020-06-22T08:28:18 IST" finished-at="2020-06-22T08:28:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- APIloginCarLoan -->
+        <test-method status="PASS" signature="BeforeMthod()[pri:0, instance:TestPackage.day3@63e2203c]" name="BeforeMthod" is-config="true" duration-ms="0" started-at="2020-06-22T08:28:18 IST" finished-at="2020-06-22T08:28:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMthod -->
+        <test-method status="PASS" signature="smoketest3()[pri:0, instance:TestPackage.day3@63e2203c]" name="smoketest3" duration-ms="2" started-at="2020-06-22T08:28:18 IST" finished-at="2020-06-22T08:28:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- smoketest3 -->
+        <test-method status="PASS" signature="BeforeMthod()[pri:0, instance:TestPackage.day3@63e2203c]" name="BeforeMthod" is-config="true" duration-ms="1" started-at="2020-06-22T08:28:18 IST" finished-at="2020-06-22T08:28:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMthod -->
+        <test-method status="PASS" signature="webloginCarLoan()[pri:0, instance:TestPackage.day3@63e2203c]" name="webloginCarLoan" duration-ms="3" started-at="2020-06-22T08:28:18 IST" finished-at="2020-06-22T08:28:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webloginCarLoan -->
+        <test-method status="PASS" signature="afclass()[pri:0, instance:TestPackage.day3@63e2203c]" name="afclass" is-config="true" duration-ms="1" started-at="2020-06-22T08:28:18 IST" finished-at="2020-06-22T08:28:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afclass -->
+        <test-method status="PASS" signature="AFSuite()[pri:0, instance:TestPackage.day3@63e2203c]" name="AFSuite" is-config="true" duration-ms="1" started-at="2020-06-22T08:28:18 IST" finished-at="2020-06-22T08:28:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AFSuite -->
+      </class> <!-- TestPackage.day3 -->
+      <class name="TestPackage.day2">
+        <test-method status="PASS" signature="BFSuite()[pri:0, instance:TestPackage.day2@4b4523f8]" name="BFSuite" is-config="true" duration-ms="10" started-at="2020-06-22T08:28:17 IST" finished-at="2020-06-22T08:28:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BFSuite -->
+      </class> <!-- TestPackage.day2 -->
+    </test> <!-- Loan -->
+  </suite> <!-- Loan -->
+</testng-results>

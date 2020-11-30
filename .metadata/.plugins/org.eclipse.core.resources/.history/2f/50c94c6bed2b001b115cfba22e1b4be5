@@ -1,0 +1,47 @@
+package TestNGPackage;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class Sprint1 {
+	
+	@Test(description="Login test case",priority = 3)
+	public void tc01()
+	{
+		System.out.println("Inside tc1");
+	}
+	@Test(description="Selecting Product",priority = 2)
+	public void tc02()
+	{
+		System.out.println("Inside tc2");
+	}
+	@Test(description="checkout to cart",priority = 1,dependsOnMethods ="tc01")
+	public void tc03()
+	{
+		System.out.println("Inside tc3");
+		Assert.fail();
+	}
+	
+	@Test(description="go to url",priority = -2)
+	public void tc04()
+	{
+		System.out.println("Inside tc4");
+	}
+
+
+	@BeforeMethod
+	public void LaunchBrowser()
+	{
+		System.out.println("Launch Browser");
+	}
+	@AfterMethod
+	public void CloseBrowser()
+	{
+		System.out.println("Close Browser");
+	}
+	
+}
+
+

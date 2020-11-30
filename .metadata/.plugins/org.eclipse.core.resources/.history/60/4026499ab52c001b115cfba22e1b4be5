@@ -1,0 +1,33 @@
+package TestNGPackage;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+
+public class Base {
+//utility code: that need to get executed everytime
+	
+	@Parameters({"Browser","Url"})
+	@BeforeMethod(alwaysRun = true)
+	public void LaunchBrowser(   String browser, String Url)
+	{
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+		System.out.println("Launch Browser");
+		}
+		
+		
+		else if (browser.equalsIgnoreCase("i.e")) {
+			System.out.println("Launching I.E");
+		}
+		
+		
+	}
+	@AfterMethod
+	public void CloseBrowser()
+	{
+		System.out.println("Close Browser");
+	}
+	
+}

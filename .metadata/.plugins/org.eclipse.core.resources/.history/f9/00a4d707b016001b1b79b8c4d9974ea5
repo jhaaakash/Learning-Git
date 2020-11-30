@@ -1,0 +1,45 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class RobotClassAutomation {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		
+		
+		
+		
+		// TODO Auto-generated method stub
+		RobotClassAutomation obj=new RobotClassAutomation();
+		obj.LaunchBrowser (chrome, http://only-testing-blog.blogspot.com/2014/01/textbox.html);
+		
+		
+		//driver.findElement(By.xpath("//input[@name='img']")).click();
+		
+		driver.findElement(By.xpath("//input[@name='img']")).click();
+
+		
+		}
+	
+	public WebDriver LaunchBrowser (String browser, String url)
+	{
+		WebDriver driver =null;
+		
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Software\\Browser_Driver\\chromedriver_win32\\chromedriver.exe");
+		ChromeOptions option = new ChromeOptions();
+		 option.addArguments("--disable-notifications");
+
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(url);
+		}
+		return driver;
+		
+	}
+
+}

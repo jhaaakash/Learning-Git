@@ -1,0 +1,85 @@
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class RobotClassAutomation {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		RobotClassAutomation obj=new RobotClassAutomation();
+		obj.tc08();
+		
+	}
+	
+	
+	public void tc08() throws InterruptedException
+	{
+		WebDriver driver= LaunchBrowser("chrome", "https://www.makemytrip.com/");
+		
+		Thread.sleep(15000);
+		driver.switchTo().frame(driver.findElement(By.id("webklipper-publisher-widget-container-notification-frame")));
+	
+		driver.findElement(By.id("webklipper-publisher-widget-container-notification-close-div")).click();
+		driver.switchTo().defaultContent();
+		
+		driver.findElement(By.id("fromCity")).click();
+		//driver.findElement(By.cssSelector("body.desktop.in:nth-child(2) div.bgGradient div.minContainer div.widgetSection.appendBottom40.primaryTraveler div.fsw.widgetOpen div.fsw_inner:nth-child(1) div.fsw_inputBox.searchCity.inactiveWidget.activeWidget:nth-child(1) div:nth-child(2) div:nth-child(1) div.hsw_autocomplePopup.autoSuggestPlugin div.react-autosuggest__container.react-autosuggest__container--open > input.react-autosuggest__input.react-autosuggest__input--open")).click();
+		
+		WebElement lst=driver.findElement(By.id("react-autowhatever-1"));
+		
+		List<WebElement> cities=lst.findElements(By.tagName("li"));
+		
+		for(WebElement val:cities)
+		{
+			if(val.getText().contains("Hyderabad"))
+			{
+				val.click();
+			}
+		}
+		
+		//----------------------------------------------
+		//driver.findElement(By.id("toCity")).click();
+		
+		//WebElement lst1=driver.findElement(By.cssSelector("#react-autowhatever-1"));
+		
+		//List<WebElement> cities1=lst1.findElements(By.tagName("li"));
+		
+		//for(WebElement val:cities)
+		//{
+		//	if(val.getText().contains("Bhopal"))
+		//	{
+		//		val.click();
+		//	}
+		//}
+		
+		
+	}
+	
+	public  WebDriver LaunchBrowser (String browser, String url)
+	{
+		WebDriver driver =null;
+		
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Software\\Browser_Driver\\chromedriver_win32\\chromedriver.exe");
+		ChromeOptions option = new ChromeOptions();
+		 option.addArguments("--disable-notifications");
+
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(url);
+		}
+		return driver;
+		
+	}
+
+	
+	
+}

@@ -1,0 +1,58 @@
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class RobotClassAutomation {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		RobotClassAutomation obj=new RobotClassAutomation();
+		obj.tc08();
+		
+	}
+	
+	
+	public void tc08()
+	{
+		WebDriver driver= LaunchBrowser("chrome", "http://only-testing-blog.blogspot.com/2014/01/textbox.html");
+		driver.findElement(By.id("fromCity")).click();
+		
+		WebElement lst=driver.findElement(By.id("react-autowhatever-1"));
+		
+		List<WebElement> cities=lst.findElements(By.tagName("li"));
+		
+		for(WebElement val:cities)
+		{
+			if(val.getText().contains("Hyderabad"))
+			{
+				val.click();
+			}
+		}
+	}
+	
+	public  WebDriver LaunchBrowser (String browser, String url)
+	{
+		WebDriver driver =null;
+		
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Software\\Browser_Driver\\chromedriver_win32\\chromedriver.exe");
+		ChromeOptions option = new ChromeOptions();
+		 option.addArguments("--disable-notifications");
+
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(url);
+		}
+		return driver;
+		
+	}
+
+	
+	
+}
